@@ -26,9 +26,7 @@ user_agent_ = 'Dalvik/2.1.0 (Linux; U; Android 11; Pixel 5 Build/RD1A.201105.003
 # ==== User Info ====
 def ReadConf():
     data = json.loads(
-        requests.get(
-            url=f'https://raw.githubusercontent.com/{github_name_}/FGODailyBonusLog/main/cfg.json', verify=False
-        ).text
+        {"global": {"appVer": "2.54.0", "assetbundleFolder": "trb3ulHJR4lI/", "dataServerFolderCrc": 610168911, "dataVer": 1419, "dateVer": 1655046000}}
     )
     global app_ver_, data_ver_, date_ver_, asset_bundle_folder_, data_server_folder_crc_
     app_ver_ = data['global']['appVer']
